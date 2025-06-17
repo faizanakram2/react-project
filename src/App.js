@@ -11,6 +11,8 @@ import Download from './components/Download';
 import FaqSection from './components/Faq';
 import Latestnews from './components/Latestnews';
 import Contact from './components/Contact';
+import Newsletter from './components/Newsletter';
+import Footer from './components/Footer';
 function App() {
   return (
     <div>
@@ -26,6 +28,8 @@ function App() {
       <FaqSection />
       <Latestnews />
       <Contact />
+      <Newsletter />
+      <Footer />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 const Features = () => {
     return (
-      <section className="py-16 bg-white dark:bg-gray-900">
+      <section data-aos="fade-up" className="py-16 bg-white dark:bg-gray-900">
     <div className="max-w-6xl mx-auto px-4 text-center">
       <p className="text-2xl font-semibold text-indigo-600 uppercase mb-2">Crypto Feature</p>
       <h2 className="text-6xl font-bold text-gray-900 dark:text-white mb-4">Best Features</h2>

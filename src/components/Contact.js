@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-20 bg-[#f6f9ff]">
+    <section data-aos="fade-up" id="contact" className="py-20 bg-[#f6f9ff]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap gap-10 justify-between">
           {/* LEFT COLUMN - Contact Info */}

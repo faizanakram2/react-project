@@ -1,83 +1,74 @@
-import { useState } from "react"
-import { ChevronDown } from "lucide-react"
+import React, { useState } from 'react';
+import faqShape1 from '../assets/faq-shape-1.svg';
+import faqShape2 from '../assets/faq-shape-2.svg';
 
-export default function FaqSection() {
-  // State to track which FAQ is open
-  const [openFaq, setOpenFaq] = useState(null)
+const faqs = [
+  { question: 'How can I participate in the ICO Token sale?', answer: 'You can participate by registering on our platform and following the purchase process.' },
+  { question: 'What is ICO Crypto?', answer: 'ICO Crypto is a decentralized cryptocurrency used for secure transactions and investments.' },
+  { question: 'How do I benefit from the ICO Token?', answer: 'Holders of ICO Tokens gain access to premium features and possible future profits.' },
+  { question: 'How can I purchase bitcoin?', answer: 'You can purchase Bitcoin on major exchanges like Binance, Coinbase, or Kraken using fiat or other crypto.' },
+];
 
-  // Toggle FAQ open/close
-  const toggleFaq = (index) => {
-    setOpenFaq(openFaq === index ? null : index)
-  }
+const FAQ = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
 
-  // FAQ data
-  const faqs = [
-    {
-      question: "What is cryptocurrency?",
-      answer:
-        "Cryptocurrency is a digital or virtual form of currency that uses cryptography for security, making it difficult to counterfeit. Unlike traditional currencies issued by governments (fiat money), cryptocurrencies operate on decentralized systems based on blockchain technology – a distributed ledger enforced by a network of computers. Bitcoin, created in 2009, was the first cryptocurrency, but today there are thousands of alternative cryptocurrencies with various functions and specifications.",
-    },
-    {
-      question: "How do I create a crypto wallet?",
-      answer:
-        "Creating a crypto wallet involves several steps: First, choose the type of wallet that suits your needs (hardware, software, mobile, or paper). For beginners, mobile or desktop wallets are often easiest. Next, download a reputable wallet application from the official website or app store. Follow the setup instructions, which typically involve creating a password and backing up your recovery phrase (usually 12-24 words). Keep this phrase secure and never share it – it's the only way to recover your wallet if you lose access. Finally, once setup is complete, you can receive cryptocurrency by sharing your public address with others.",
-    },
-    {
-      question: "Is cryptocurrency investment safe?",
-      answer:
-        "Cryptocurrency investment carries significant risks that investors should understand. The market is highly volatile, with prices that can fluctuate dramatically in short periods. Regulatory uncertainty exists as governments worldwide are still developing frameworks for crypto. Security risks include exchange hacks and scams. However, many investors include crypto as part of a diversified portfolio. To invest more safely: research thoroughly before investing, only invest what you can afford to lose, use secure and reputable exchanges, implement strong security practices, and consider dollar-cost averaging instead of trying to time the market.",
-    },
-    {
-      question: "What is blockchain technology?",
-      answer:
-        "Blockchain technology is a decentralized, distributed ledger that records transactions across many computers. Once a record is added to the chain, it's very difficult to change. Each \"block\" contains a number of transactions, and every time a new transaction occurs, a record of that transaction is added to every participant's ledger. This makes blockchain particularly secure and resistant to modification of data. The decentralized nature means it doesn't rely on a central point of control. Beyond cryptocurrencies, blockchain has applications in supply chain management, healthcare, voting systems, identity verification, and many other fields.",
-    },
-  ]
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
   return (
-    <section id="faq" className="py-16 bg-gray-50 dark:bg-gray-800">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+    <section id="faq" className="relative z-10 bg-light-bg py-24 dark:bg-[#14102C]">
+      <div className="container mx-auto px-4">
+        <div className="mx-auto mb-16 max-w-[630px] text-center md:mb-20">
+          <span className="mb-3 text-lg font-bold uppercase text-primary sm:text-xl">FAQ</span>
+          <h2 className="mb-3 text-3xl font-bold leading-tight text-black dark:text-white md:text-[45px]">
             Frequently Asked Questions
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400">
-            Find answers to the most common questions about cryptocurrency and our services.
+          <p className="mx-auto max-w-[590px] text-lg font-medium text-body-color-2 dark:text-body-color">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed congue arcu, In et dignissim quam condimentum vel.
           </p>
         </div>
 
-        <div className="space-y-6">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden"
-            >
-              <button
-                className="w-full text-left px-6 py-4 focus:outline-none flex justify-between items-center"
-                onClick={() => toggleFaq(index)}
-                aria-expanded={openFaq === index}
-                aria-controls={`faq-answer-${index}`}
-              >
-                <h3 className="text-lg font-medium text-gray-900 dark:text-white">{faq.question}</h3>
-                <ChevronDown
-                  className={`h-5 w-5 text-gray-500 transition-transform duration-300 ${
-                    openFaq === index ? "transform rotate-180" : ""
-                  }`}
-                />
-              </button>
-              <div
-                id={`faq-answer-${index}`}
-                className={`overflow-hidden transition-all duration-300 ${
-                  openFaq === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-                }`}
-                aria-hidden={openFaq !== index}
-              >
-                <div className="px-6 pb-4 text-gray-600 dark:text-gray-400">{faq.answer}</div>
+        <div className="-mx-4 flex flex-wrap justify-center">
+          <div className="w-full px-4 lg:w-9/12 xl:w-8/12">
+            {faqs.map((faq, index) => (
+              <div key={index} className="mb-10 rounded-lg bg-white px-7 py-6 dark:bg-dark md:px-10 md:py-8">
+                <button
+                  onClick={() => toggleFAQ(index)}
+                  className="flex w-full items-center justify-between text-left"
+                >
+                  <h3 className="mr-2 text-base font-bold text-dark dark:text-white sm:text-lg md:text-xl">
+                    {faq.question}
+                  </h3>
+                  <span className="icon inline-flex h-5 w-full max-w-[20px] items-center justify-center rounded-sm bg-body-color-2 text-lg font-semibold text-white dark:bg-body-color dark:text-black">
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                      <path
+                        d="M8.82033 1.91065L4.99951 5.73146L1.17869 1.91064L0 3.08978L4.99951 8.08978L10 3.08979L8.82033 1.91065Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                </button>
+                {activeIndex === index && (
+                  <p className="mt-4 text-body-color dark:text-body-color-2 text-base">
+                    {faq.answer}
+                  </p>
+                )}
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
+
+      {/* Decorative Shapes */}
+      <div className="absolute -bottom-36 left-0 -z-10">
+        <img src={faqShape1} alt="shape" width={206} height={637} />
+      </div>
+      <div className="absolute -top-36 right-0 -z-10">
+        <img src={faqShape2} alt="shape" width={172} height={517} />
+      </div>
     </section>
-  )
-}
+  );
+};
+
+export default FAQ;

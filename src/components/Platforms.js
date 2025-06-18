@@ -6,7 +6,7 @@ import plainadmin from '../assets/plainadmin.svg'
 
 const Platforms = () => {
   return (
-    <section className="py-10 bg-white dark:bg-gray-900">
+    <section data-aos="fade-up" className="py-10 bg-white dark:bg-gray-900">
       <div className="max-w-6xl mx-auto px-4 text-center">
         <h2 className="text-xl font-semibold text-gray-800 dark:text-white mb-8">
           Join the <span className="text-indigo-600 dark:text-indigo-400">20,000+</span> companies using our platform

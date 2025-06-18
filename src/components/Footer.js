@@ -1,169 +1,100 @@
 import React from 'react';
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
+import logo from '../assets/cryptologo.svg';
 
-import { useState } from "react"
-import { Facebook, Twitter, Instagram, Linkedin, Github, Send } from "lucide-react"
-
-export default function Footer() {
-  const [email, setEmail] = useState("")
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // Handle newsletter signup logic here
-    console.log("Subscribed with:", email)
-    setEmail("")
-    alert("Thanks for subscribing!")
-  }
-
+const Footer = () => {
   return (
-    <footer data-aos="fade-up" className="bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800">
-      <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-12">
-          {/* Company Info */}
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              {/* <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center"> */}
-                {/* <span className="text-white font-bold text-sm">₿</span> */}
-              {/* </div> */}
-              <span className="text-xl font-bold text-gray-900 dark:text-white">
-                Crypto
-              </span>
-            </div>
-            <p className="text-sm">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae quam nec ante fringilla vel at erat convallis elit.
+    <footer className="relative z-10 pt-28 bg-gray-50 dark:bg-gray-900">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-wrap -mx-4">
+
+          {/* Logo and Description */}
+          <div className="w-full px-4 md:w-1/2 lg:w-4/12 mb-14 xl:mb-20">
+            <a href="/" className="inline-block mb-6">
+              <img 
+                src={logo} 
+                alt="Logo" 
+                className="block dark:hidden" 
+                width="176" height="46"
+              />
+              <img 
+                src={logo} 
+                alt="Logo" 
+                className="hidden dark:block" 
+                width="176" height="46"
+              />
+            </a>
+            <p className="mb-10 text-base font-medium text-gray-600 dark:text-gray-300">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae quam nec ante fringilla.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-blue-500 transition-colors duration-200">
-                <Facebook size={20} />
-                <span className="sr-only">Facebook</span>
+            <div className="flex space-x-3">
+              <a href="#" className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-white hover:bg-primary hover:text-white">
+                <FaFacebookF size={18} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-blue-500 transition-colors duration-200">
-                <Twitter size={20} />
-                <span className="sr-only">Twitter</span>
+              <a href="#" className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-white hover:bg-primary hover:text-white">
+                <FaTwitter size={18} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-blue-500 transition-colors duration-200">
-                <Instagram size={20} />
-                <span className="sr-only">Instagram</span>
+              <a href="#" className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-white hover:bg-primary hover:text-white">
+                <FaLinkedinIn size={18} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-blue-500 transition-colors duration-200">
-                <Linkedin size={20} />
-                <span className="sr-only">LinkedIn</span>
-              </a>
-              <a href="#" className="text-gray-400 hover:text-blue-500 transition-colors duration-200">
-                <Github size={20} />
-                <span className="sr-only">GitHub</span>
+              <a href="#" className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-white hover:bg-primary hover:text-white">
+                <FaYoutube size={18} />
               </a>
             </div>
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#home" className="hover:text-blue-500 transition-colors duration-200">
-                  What is ICO
-                </a>
-              </li>
-              <li>
-                <a href="#features" className="hover:text-blue-500 transition-colors duration-200">
-                  RoadMap
-                </a>
-              </li>
-              <li>
-                <a href="#roadmap" className="hover:text-blue-500 transition-colors duration-200">
-                  WhitePaper
-                </a>
-              </li>
-              <li>
-                <a href="#about" className="hover:text-blue-500 transition-colors duration-200">
-                  Social Network
-                </a>
-              </li>
-              <li>
-                <a href="#support" className="hover:text-blue-500 transition-colors duration-200">
-                  Join us now 
-                </a>
-              </li>
+          <div className="w-full px-4 sm:w-1/2 lg:w-4/12 xl:w-2/12 mb-14 xl:mb-20">
+            <h4 className="mb-5 text-2xl font-bold text-black dark:text-white">Quick Links</h4>
+            <ul className="space-y-3 text-base text-gray-600 dark:text-gray-300">
+              <li><a href="#" className="hover:text-primary">What is ICO</a></li>
+              <li><a href="#" className="hover:text-primary">Roadmap</a></li>
+              <li><a href="#" className="hover:text-primary">Whitepaper</a></li>
+              <li><a href="#" className="hover:text-primary">Social Network</a></li>
+              <li><a href="#" className="hover:text-primary">Join Us Now</a></li>
             </ul>
           </div>
 
-          {/* Resources */}
-          <div>
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Resources</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="hover:text-blue-500 transition-colors duration-200">
-                  Settings and Privacy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-blue-500 transition-colors duration-200">
-                  Help & Support
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-blue-500 transition-colors duration-200">
-                  Terms & Conditions
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-blue-500 transition-colors duration-200">
-                  24/7 Supports
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-blue-500 transition-colors duration-200">
-                  On point FAQ
-                </a>
-              </li>
+          {/* Supports */}
+          <div className="w-full px-4 sm:w-1/2 lg:w-4/12 xl:w-2/12 mb-14 xl:mb-20">
+            <h4 className="mb-5 text-2xl font-bold text-black dark:text-white">Supports</h4>
+            <ul className="space-y-3 text-base text-gray-600 dark:text-gray-300">
+              <li><a href="#" className="hover:text-primary">Setting & Privacy</a></li>
+              <li><a href="#" className="hover:text-primary">Help & Support</a></li>
+              <li><a href="#" className="hover:text-primary">Terms & Conditions</a></li>
+              <li><a href="#" className="hover:text-primary">24/7 Supports</a></li>
+              <li><a href="#" className="hover:text-primary">On Point FAQ</a></li>
             </ul>
           </div>
 
-          {/* Newsletter */}
-          <div>
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">News & Posts</h3>
-            <p className="text-sm mb-4">Stay updated with our latest features and releases.</p>
-            {/* <form onSubmit={handleSubmit} className="flex">
-              <div className="relative flex-grow">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your email"
-                  required
-                  className="w-full px-4 py-2 rounded-l-md bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 dark:text-white"
-                />
+          {/* News & Posts */}
+          <div className="w-full px-4 md:w-1/2 lg:w-1/2 xl:w-4/12 mb-14 xl:mb-20">
+            <h4 className="mb-5 text-2xl font-bold text-black dark:text-white">News & Post</h4>
+            <div className="space-y-3">
+              <div className="flex">
+                <div className="w-[75px] h-[75px] rounded-md overflow-hidden mr-5">
+                  <a href="/blog/laboris-nisi-aliquip-dium-exiuliym-commo-cons">
+                    <img 
+                      src="https://cdn.sanity.io/images/d33zuypx/production/a0ca7f2ce7b15da5c3c4bb79e6856ab013fce446-970x430.jpg" 
+                      alt="blog" 
+                      className="object-cover w-full h-full"
+                    />
+                  </a>
+                </div>
+                <div>
+                  <a href="/blog/laboris-nisi-aliquip-dium-exiuliym-commo-cons" className="block text-base font-medium text-gray-600 dark:text-gray-300 hover:text-primary">
+                    Laboris nisi aliquip dium exiuliym commo cons
+                  </a>
+                </div>
               </div>
-              <button
-                type="submit"
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-4 py-2 rounded-r-md transition-colors duration-200 flex items-center justify-center"
-              >
-                <Send size={18} />
-                <span className="sr-only">Subscribe</span>
-              </button>
-            </form> */}
-          </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-200 dark:border-gray-800 py-6">
-          <div className="flex flex-col md:flex-row justify-center items-center text-center">
-            <p className="text-xxl">© {new Date().getFullYear()} Crypto- All rights reserved. Crafted by Nextjs.Templates</p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              {/* <a href="#" className="text-sm hover:text-blue-500 transition-colors duration-200">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-sm hover:text-blue-500 transition-colors duration-200">
-                Terms of Service
-              </a>
-              <a href="#" className="text-sm hover:text-blue-500 transition-colors duration-200">
-                Cookies
-              </a> */}
+              {/* Add more posts similarly here */}
             </div>
           </div>
+
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
+
+export default Footer;

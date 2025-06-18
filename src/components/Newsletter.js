@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Newsletter() {
   return (
-    <section className="relative z-10">
+    <section data-aos="fade-up" className="relative z-10">
       <div className="bg-[#0c145a] text-white rounded-md max-w-5xl mx-auto flex flex-col lg:flex-row items-center justify-between p-8 space-y-6 lg:space-y-0 lg:space-x-6 shadow-lg">
         
         {/* Left Side Content */}

@@ -5,7 +5,7 @@ import chain from '../assets/chain.png';
 import polygon from '../assets/polygon.png';
 const HeroSection = () => {
   return (
-    <section className="text-center py-20 px-4 pt-40 pb-20 px-4 ">
+    <section data-aos="fade-up" className="text-center py-20 px-4 pt-40 pb-20 px-4 ">
       <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
         Next.js Template and Boilerplate <br /> for Crypto, ICO and Web3
       </h1>

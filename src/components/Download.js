@@ -3,7 +3,7 @@ import appImage from '../assets/app-image.webp';
 
 export default function Downloads() {
   return (
-    <section id="download" className="py-24">
+    <section data-aos="fade-up" id="download" className="py-24">
       <div className="container">
         <div className="-mx-4 flex flex-wrap items-center">
           {/* Left Section */}

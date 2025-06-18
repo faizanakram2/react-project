@@ -1,13 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
+import logo from '../assets/cryptologo.svg';
 
 const Navbar = () => {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState(() => {
+    // Check localStorage or system preference
+    if (typeof window !== 'undefined') {
+      const storedTheme = localStorage.getItem('theme');
+      if (storedTheme) return storedTheme;
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) return 'dark';
+    }
+    return 'light';
+  });
   const [showDropdown, setShowDropdown] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    document.documentElement.classList.toggle('dark', theme === 'dark');
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    localStorage.setItem('theme', theme);
   }, [theme]);
 
   useEffect(() => {
@@ -32,7 +46,9 @@ const Navbar = () => {
         text-black dark:text-white transition-all duration-300"
     >
       {/* Left: Logo */}
-      <div className="text-2xl font-bold">Crypto</div>
+      <div className="flex items-center">
+        <img src={logo} alt="Crypto Logo" className="h-8 w-auto" />
+      </div>
 
       {/* Center: Links */}
       <ul className="hidden md:flex gap-6 font-medium relative">

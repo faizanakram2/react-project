@@ -1,3 +1,6 @@
+import btc from '../assets/btc.jpeg'
+import coding from '../assets/coding.jpeg'
+import mac from '../assets/mac.jpeg'
 
 export default function Latestnews() {
     return (
@@ -19,7 +22,7 @@ export default function Latestnews() {
                     <div className="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-md">
                         <div className="h-48 overflow-hidden">
                             <img
-                                src="src/assets/btc.jpeg"
+                                src={btc}
                                 alt="Blog post"
                                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                             />
@@ -54,7 +57,7 @@ export default function Latestnews() {
                     <div className="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-md">
                         <div className="h-48 overflow-hidden">
                             <img
-                                src="src/assets/coding.jpeg"
+                                src={coding}
                                 alt="Blog post"
                                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                             />
@@ -89,7 +92,7 @@ export default function Latestnews() {
                     <div className="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-md">
                         <div className="h-48 overflow-hidden">
                             <img
-                                src="src/assets/mac.jpeg"
+                                src={mac}
                                 alt="Blog post"
                                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                             />

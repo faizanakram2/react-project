@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Chart from 'react-apexcharts';
+import tokenSaleShape from '../assets/token-sale-shape.svg';
 
 const TokenSaleSection = () => {
   // Log on tooltip hover
@@ -42,8 +43,8 @@ const TokenSaleSection = () => {
   const chartSeries = [29.6, 39.2, 10.8, 20.4];
 
   return (
-    <div className="bg-white pt-0 pb-24">
-      <section className="rounded-lg bg-[#f5f8ff] dark:bg-[#14102C] px-8 py-12 sm:px-14 sm:py-16 lg:px-8 xl:px-14 max-w-full mx-auto w-[1400px]">
+    <div className="bg-white pt-0 pb-24 relative overflow-hidden">
+      <section className="rounded-lg bg-[#f5f8ff] dark:bg-[#14102C] px-8 py-12 sm:px-14 sm:py-16 lg:px-8 xl:px-14 max-w-full mx-auto w-[1400px] relative z-10">
         <div className="-mx-4 flex flex-wrap items-center">
           {/* Left: Donut Chart */}
           <div className="w-full px-4 lg:w-1/2">
@@ -83,6 +84,14 @@ const TokenSaleSection = () => {
           </div>
         </div>
       </section>
+      {/* Right-side background image */}
+      <img
+        src={tokenSaleShape}
+        alt="Background"
+        className="absolute top-0 right-0 h-full object-contain z-0 pointer-events-none"
+        style={{ maxWidth: '50%', minWidth: '200px' }}
+        aria-hidden="true"
+      />
     </div>
   );
 };

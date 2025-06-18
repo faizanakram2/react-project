@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { useState } from "react"
 import { Facebook, Twitter, Instagram, Linkedin, Github, Send } from "lucide-react"
 
@@ -6,26 +8,29 @@ export default function Footer() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Add your form submission logic here
+    // Handle newsletter signup logic here
+    console.log("Subscribed with:", email)
+    setEmail("")
+    alert("Thanks for subscribing!")
   }
 
   return (
-    <footer className="bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer data-aos="fade-up" className="bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800">
+      <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-12">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               {/* <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center"> */}
-              {/* <span className="text-white font-bold text-sm">₿</span> */}
+                {/* <span className="text-white font-bold text-sm">₿</span> */}
               {/* </div> */}
               <span className="text-xl font-bold text-gray-900 dark:text-white">
                 Crypto
               </span>
             </div>
             <p className="text-sm">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae quam nec ante fringilla vel at erat convallis elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae quam nec ante fringilla vel at erat convallis elit.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-blue-500 transition-colors duration-200">
@@ -77,7 +82,7 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#support" className="hover:text-blue-500 transition-colors duration-200">
-                  Join us now
+                  Join us now 
                 </a>
               </li>
             </ul>
@@ -119,7 +124,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">News & Posts</h3>
             <p className="text-sm mb-4">Stay updated with our latest features and releases.</p>
-            <form onSubmit={handleSubmit} className="flex">
+            {/* <form onSubmit={handleSubmit} className="flex">
               <div className="relative flex-grow">
                 <input
                   type="email"
@@ -137,13 +142,13 @@ export default function Footer() {
                 <Send size={18} />
                 <span className="sr-only">Subscribe</span>
               </button>
-            </form>
+            </form> */}
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-200 dark:border-gray-800 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-col md:flex-row justify-center items-center text-center">
             <p className="text-xxl">© {new Date().getFullYear()} Crypto- All rights reserved. Crafted by Nextjs.Templates</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               {/* <a href="#" className="text-sm hover:text-blue-500 transition-colors duration-200">

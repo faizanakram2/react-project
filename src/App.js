@@ -13,9 +13,11 @@ import Latestnews from './components/Latestnews';
 import Contact from './components/Contact';
 import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
+import BackgroundWaves from './components/Backgroundwaves';
 function App() {
   return (
     <div>
+      <BackgroundWaves />
       <Navbar />
       <Herosection />
       <Platforms />

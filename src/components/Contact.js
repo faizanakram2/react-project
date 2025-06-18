@@ -1,75 +1,64 @@
 import React from "react";
-import { MapPin, Phone, Mail, Clock, Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react";
 
 export default function ContactSection() {
-    return (
-        <section id="contact" className="py-16 bg-blue-100 dark:bg-blue-800">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
-                    <div className="wow fadeInUp mb-16 max-w-[350px]" data-wow-delay="0s">
-                        <span className="text-primary mb-3 text-lg font-bold uppercase sm:text-xl">Contact Us</span>
-                        <h2 className="mb-3 text-3xl leading-tight font-bold text-black md:text-[45px] dark:text-white">Let's talk about your problem.</h2>
-                    </div>
-                </div>
-                <div className="-mx-4 flex flex-wrap">
-                    <div className="w-full px-4 sm:w-1/2">
-                        <div style={{ opacity: 1, transform: "none" }}>
-                            <div className="wow fadeInUp mb-11 max-w-[250px]" data-wow-delay="0s">
-                                <h3 className="text-dark mb-4 text-lg font-semibold dark:text-white">Our Location</h3>
-                                <p className="text-body-color-2 dark:text-body-color text-base leading-loose font-medium">401 Broadway, 24th Floor, Orchard Cloud View, London</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="w-full px-4 sm:w-1/2">
-                        <div style={{ opacity: 1, transform: "none" }}>
-                            <div className="wow fadeInUp mb-11 max-w-[250px]" data-wow-delay="0s">
-                                <h3 className="text-dark mb-4 text-lg font-semibold dark:text-white">Email Address</h3>
-                                <p className="text-body-color-2 dark:text-body-color text-base leading-loose font-medium">info@yourdomain.com</p>
-                                <p className="text-body-color-2 dark:text-body-color text-base leading-loose font-medium">contact@yourdomain.com</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="w-full px-4 sm:w-1/2">
-                        <div style={{ opacity: 1, transform: "none" }}>
-                            <div className="wow fadeInUp mb-11 max-w-[250px]" data-wow-delay="0s">
-                                <h3 className="text-dark mb-4 text-lg font-semibold dark:text-white">Phone Number</h3>
-                                <p className="text-body-color-2 dark:text-body-color text-base leading-loose font-medium">+990 846 73644</p>
-                                <p className="text-body-color-2 dark:text-body-color text-base leading-loose font-medium">+550 9475 4543</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="w-full px-4 sm:w-1/2">
-                        <div style={{ opacity: 1, transform: "none" }}>
-                            <div className="wow fadeInUp mb-11 max-w-[250px]" data-wow-delay="0s">
-                                <h3 className="text-dark mb-4 text-lg font-semibold dark:text-white">How Can We Help?</h3>
-                                <p className="text-body-color-2 dark:text-body-color text-base leading-loose font-medium">Tell us your problem we will get back to you ASAP.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="w-full px-4 lg:w-5/12">
-                    <div style={{ opacity: 1, transform: "none" }}>
-                        <div className="sm:14 wow fadeInUp dark:bg-dark rounded-md bg-white px-8 py-12" data-wow-delay="0s">
-                            <h3 className="text-dark mb-8 text-2xl font-bold sm:text-[34px] lg:text-2xl xl:text-[34px] dark:text-white">Send us a Message</h3>
-                            <form>
-                                <div className="mb-5">
-                                    <label htmlFor="name" className="text-dark mb-2 block text-sm font-medium dark:text-white">Full Name*</label>
-                                    <input id="name" placeholder="Enter your full name" className="text-body-color focus:border-primary w-full rounded-md border border-[#E9E9E9]/50 bg-transparent px-5 py-3 text-base font-medium outline-hidden dark:border-[#E9E9E9]/20 dark:bg-white/5" type="text" name="name" />
-                                </div>
-                                <div className="mb-5">
-                                    <label htmlFor="email" className="text-dark mb-2 block text-sm font-medium dark:text-white">Email Address*</label>
-                                    <input id="email" placeholder="Enter your email address" className="text-body-color focus:border-primary w-full rounded-md border border-[#E9E9E9]/50 bg-transparent px-5 py-3 text-base font-medium outline-hidden dark:border-[#E9E9E9]/20 dark:bg-white/5" type="email" name="email" />
-                                </div>
-                                <div className="mb-5">
-                                    <label htmlFor="message" className="text-dark mb-2 block text-sm font-medium dark:text-white">Message*</label>
-                                    <textarea name="message" rows="6" id="message" placeholder="Type your message" className="text-body-color focus:border-primary w-full rounded-md border border-[#E9E9E9]/50 bg-transparent px-5 py-3 text-base font-medium outline-hidden dark:border-[#E9E9E9]/20 dark:bg-white/5"></textarea>
-                                </div>
-                                <button className="bg-primary hover:bg-primary/90 w-full rounded-full p-3 text-center text-base font-semibold text-white dark:bg-white dark:text-black dark:hover:bg-white/90">Send Message</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+  return (
+    <section id="contact" className="py-20 bg-[#f6f9ff]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-wrap gap-10 justify-between">
+          {/* LEFT COLUMN - Contact Info */}
+          <div className="w-full lg:w-6/12 space-y-8">
+            <div>
+              <h3 className="text-blue-600 font-semibold uppercase text-sm">Contact Us</h3>
+              <h2 className="text-4xl font-bold text-gray-900 mt-2">Let's talk about your problem.</h2>
             </div>
-        </section>
-    );
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-sm text-gray-700">
+              <div>
+                <h4 className="font-semibold mb-2">Our Location</h4>
+                <p>401 Broadway, 24th Floor,<br />Orchard Cloud View, London</p>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-2">Email Address</h4>
+                <p>info@yourdomain.com<br />contact@yourdomain.com</p>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-2">Phone Number</h4>
+                <p>+990 846 73644<br />+550 9475 4543</p>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-2">How Can We Help?</h4>
+                <p>Tell us your problem we will get back to you ASAP.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* RIGHT COLUMN - Contact Form */}
+          <div className="w-full lg:w-5/12 bg-white rounded-lg shadow p-8">
+            <h3 className="text-2xl font-bold mb-6">Send us a Message</h3>
+            <form className="space-y-5">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium mb-1">Full Name*</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+              </div>
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium mb-1">Email Address*</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+              </div>
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium mb-1">Message*</label>
+                <textarea id="message" name="message" rows="5" placeholder="Type your message"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
+              </div>
+              <button type="submit"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 rounded-full transition duration-300">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }

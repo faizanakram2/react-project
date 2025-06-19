@@ -9,21 +9,28 @@ const teamMembers = [
     name: "Matheus Ferrero",
     role: "Marketing Expert",
     image: image01,
+    socials: ['facebook', 'twitter', 'linkedin', 'instagram', 'youtube'],
   },
   {
     name: "Eva Hudson",
     role: "Blockchain Developer",
     image: image02,
+    socials: ['facebook', 'twitter', 'linkedin', 'instagram', 'youtube'],
+
   },
   {
     name: "Jackie Sanders",
     role: "Creative Designer",
     image: image04,
+    socials: ['facebook', 'twitter', 'linkedin', 'instagram', 'youtube'],
+
   },
   {
     name: "Jackie Sanders",
     role: "SEO Expert",
     image: "https://images.unsplash.com/photo-1527980965255-d3b416303d12",
+    socials: ['facebook', 'twitter', 'linkedin', 'instagram', 'youtube'],
+
   },
 ];
 

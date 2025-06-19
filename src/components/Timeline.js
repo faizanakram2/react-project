@@ -1,4 +1,3 @@
-
 import React from 'react';
 import bitcoin from '../assets/btc.webp';
 import ethereum from '../assets/eth.png';
@@ -43,7 +42,7 @@ const Timeline = () => {
 
   return (
     <>
-      <div data-aos="fade-up" className="bg-white dark:bg-gray-900 items-center justify-center text-center px-4 py-10">
+      <div className="bg-white dark:bg-gray-900 items-center justify-center text-center px-4 py-10">
         <span className="mb-3 text-lg font-bold uppercase text-blue-600 block">ROADMAP</span>
         <h2 className="mb-3 text-3xl font-bold leading-tight text-black dark:text-white md:text-4xl">
           The Timeline
@@ -63,6 +62,7 @@ const Timeline = () => {
             const isLeft = event.side === 'left';
             return (
               <div key={index} className="relative flex justify-between items-center w-full">
+                {/* Timeline content */}
                 <div className={`w-5/12 ${isLeft ? 'order-1 text-right' : 'order-3 text-left'}`}>
                   <div className="bg-[#f8f9fd] dark:bg-gray-800 p-6 rounded-lg shadow-md transition-all duration-300">
                     <h4 className="mb-2 text-xl font-semibold text-black dark:text-white">{event.date}</h4>
@@ -78,11 +78,13 @@ const Timeline = () => {
 
                 {/* center dot */}
                 <div className="z-10 flex items-center justify-center order-2">
-                  <div className="w-5 h-5 bg-blue-600 rounded-full border-4 border-white dark:border-gray-900" />
+                  <div className="w-5 h-5 bg-blue-600 rounded-full border-2 border-white dark:border-gray-900" />
                 </div>
 
-                {/* Empty space */}
-                <div className="w-5/12 order-1" />
+                {/* Remove this extra empty space div to avoid right side dots */}
+                {/* <div className="w-5/12 order-1" /> */}
+                {/* Keep the spacing proper by rendering empty div only for left side events */}
+                {isLeft ? <div className="w-5/12 order-3" /> : null}
               </div>
             );
           })}

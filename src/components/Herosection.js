@@ -5,11 +5,13 @@ import chain from '../assets/chain.png';
 import polygon from '../assets/polygon.png';
 import matic from '../assets/polygon.png';
 import trx from '../assets/trx.webp';
+import GradientBackground from './GradientBackground';
 
 
 const HeroSection = () => {
   return (
-    <section data-aos="fade-up" className="text-center py-20 px-4 pt-40 pb-20 px-4 ">
+    <section data-aos="fade-up" className="relative text-center py-20 px-4 pt-40 pb-20">
+      <GradientBackground />
       <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
         Next.js Template and Boilerplate <br /> for Crypto, ICO and Web3
       </h1>

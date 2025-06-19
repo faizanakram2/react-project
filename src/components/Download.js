@@ -5,9 +5,9 @@ export default function Downloads() {
   return (
     <section data-aos="fade-up" id="download" className="py-24">
       <div className="container">
-        <div className="-mx-4 flex flex-wrap items-center">
+        <div className="flex flex-wrap items-center justify-center">
           {/* Left Section */}
-          <div className="w-full px-4 lg:w-1/2">
+          <div className="w-full px-4 lg:w-1/2 flex justify-center">
             <div>
               <div className="mb-12 max-w-[500px] lg:mb-0">
                 <span className="text-primary mb-3 text-lg font-bold uppercase sm:text-xl">
@@ -50,7 +50,7 @@ export default function Downloads() {
           </div>
 
           {/* Right Section */}
-          <div className="w-full px-4 lg:w-1/2">
+          <div className="w-full px-4 lg:w-1/2 flex justify-center">
             <div className="text-center relative z-10">
               <img
                 alt="app image"

@@ -43,7 +43,7 @@ const Timeline = () => {
 
   return (
     <>
-      <div className="bg-white dark:bg-gray-900 items-center justify-center text-center px-4 py-10">
+      <div data-aos="fade-up" className="bg-white dark:bg-gray-900 items-center justify-center text-center px-4 py-10">
         <span className="mb-3 text-lg font-bold uppercase text-blue-600 block">ROADMAP</span>
         <h2 className="mb-3 text-3xl font-bold leading-tight text-black dark:text-white md:text-4xl">
           The Timeline

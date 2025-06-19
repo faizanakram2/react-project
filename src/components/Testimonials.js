@@ -37,7 +37,7 @@ const testimonials = [
 ];
 
 const TestimonialCard = ({ testimonial }) => (
-    <div className="w-full px-4 md:w-1/2">
+    <div data-aos="fade-up" className="w-full px-4 md:w-1/2">
         <div className="relative z-10 mb-10 overflow-hidden rounded-[10px] bg-white px-6 py-8 sm:p-10 md:p-8 xl:p-10 dark:bg-[#131B4D]">
             <div className="absolute top-0 right-0 z-[-1]">
                 <img src={testimonialShape} alt="shape" width={254} height={182} />

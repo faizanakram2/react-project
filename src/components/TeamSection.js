@@ -29,7 +29,7 @@ const teamMembers = [
 
 export default function TeamSection() {
   return (
-    <section className="wow fadeInUp py-20 px-6 md:px-20 bg-white">
+    <section data-aos="fade-up" className="wow fadeInUp py-20 px-6 md:px-20 bg-white">
       <div className="text-center mb-12">
         <p className="text-blue-600 font-semibold text-sm tracking-widest uppercase">Our Team</p>
         <h2 className="text-4xl font-bold mt-2 mb-4">Meet out Team</h2>

@@ -6,7 +6,7 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap gap-10 justify-between">
           {/* LEFT COLUMN - Contact Info */}
-          <div className="w-full lg:w-6/12 space-y-8">
+          <div className="w-full px-4 lg:w-1/2 space-y-8">
             <div>
               <h3 className="text-blue-600 font-semibold uppercase text-sm">Contact Us</h3>
               <h2 className="text-4xl font-bold text-gray-900 mt-2">Let's talk about your problem.</h2>

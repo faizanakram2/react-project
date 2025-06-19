@@ -43,7 +43,7 @@ const TokenSaleSection = () => {
   const chartSeries = [29.6, 39.2, 10.8, 20.4];
 
   return (
-    <div className="bg-white pt-0 pb-24 relative overflow-hidden">
+    <div data-aos="fade-up" className="bg-white pt-0 pb-24 relative overflow-hidden">
       <section className="rounded-lg bg-[#f5f8ff] dark:bg-[#14102C] px-8 py-12 sm:px-14 sm:py-16 lg:px-8 xl:px-14 max-w-full mx-auto w-[1400px] relative z-10">
         <div className="-mx-4 flex flex-wrap items-center">
           {/* Left: Donut Chart */}

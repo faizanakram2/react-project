@@ -52,8 +52,8 @@ const Navbar = () => {
 
       {/* Center: Links */}
       <ul className="hidden md:flex gap-6 font-medium relative">
-        <li className="hover:text-blue-600 cursor-pointer">Home</li>
-        <li className="hover:text-blue-600 cursor-pointer">Features</li>
+        <li className="hover:text-blue-600 cursor-pointer" href="/#Home">Home</li>
+        <li className="hover:text-blue-600 cursor-pointer" href="/#Features">Features</li>
         <li className="hover:text-blue-600 cursor-pointer">Roadmap</li>
 
         {/* Dropdown under Pages */}

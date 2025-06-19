@@ -4,7 +4,7 @@ import logo from '../assets/cryptologo.svg';
 
 const Footer = () => {
   return (
-    <footer className="relative z-10 pt-28 bg-gray-50 dark:bg-gray-900">
+    <footer data-aos="fade-up" className="relative z-10 pt-28 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap -mx-4">
 

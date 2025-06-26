@@ -1,96 +1,102 @@
 import React from 'react';
-import bitcoin from '../assets/btc.webp';
-import ethereum from '../assets/eth.png';
-import chain from '../assets/chain.png';
-import polygon from '../assets/polygon.png';
+
+const steps = [
+  {
+    icon: '🔍',
+    title: 'Discovery',
+    desc: 'We start by understanding your business goals, challenges, and requirements.'
+  },
+  {
+    icon: '🗺️',
+    title: 'Planning',
+    desc: 'We create a clear roadmap and define milestones for your project.'
+  },
+  {
+    icon: '🎨',
+    title: 'Design',
+    desc: 'Our team crafts wireframes, prototypes, and user flows for a seamless experience.'
+  },
+  {
+    icon: '💻',
+    title: 'Development',
+    desc: 'We build robust, scalable, and secure software using the latest technologies.'
+  },
+  {
+    icon: '🧪',
+    title: 'Testing',
+    desc: 'Comprehensive QA ensures your product is reliable and ready for launch.'
+  },
+  {
+    icon: '🚀',
+    title: 'Launch & Support',
+    desc: 'We deploy your solution and provide ongoing support for your success.'
+  },
+];
 
 const Timeline = () => {
-  const events = [
-    {
-      date: 'Feb 25, 2025',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed congue arcu, In et dignissim quam condimentum vel',
-      logo: bitcoin,
-      name: 'Bitcoin',
-      growth: '4.5%',
-      side: 'left',
-    },
-    {
-      date: 'Jan 14, 2026',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed congue arcu, In et dignissim quam condimentum vel',
-      logo: ethereum,
-      name: 'Ethereum',
-      growth: '2.5%',
-      side: 'right',
-    },
-    {
-      date: 'Mar 30, 2028',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed congue arcu, In et dignissim quam condimentum vel',
-      logo: chain,
-      name: 'Chainlink',
-      growth: '4.5%',
-      side: 'left',
-    },
-    {
-      date: 'Dec 19, 2028',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed congue arcu, In et dignissim quam condimentum vel',
-      logo: polygon,
-      name: 'Polygon',
-      growth: '2.5%',
-      side: 'right',
-    },
-  ];
-
   return (
-    <>
-      <div className="bg-white dark:bg-gray-900 items-center justify-center text-center px-4 py-10">
-        <span className="mb-3 text-lg font-bold uppercase text-blue-600 block">ROADMAP</span>
-        <h2 className="mb-3 text-3xl font-bold leading-tight text-black dark:text-white md:text-4xl">
-          The Timeline
+    <section data-aos="fade-up" className="relative py-20 overflow-hidden">
+      {/* Animated gradient background */}
+      <div className="absolute inset-0 -z-10 animate-gradient bg-gradient-to-br from-blue-100 via-indigo-100 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900" />
+      <div className="max-w-5xl mx-auto px-4 text-center relative z-10">
+        <span className="inline-block px-4 py-1 mb-4 rounded-full bg-white/80 dark:bg-gray-900/80 text-blue-700 dark:text-blue-300 font-semibold shadow">
+          Project Journey
+        </span>
+        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-6 tracking-tight">
+          How Your Project Comes to Life
         </h2>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed congue arcu, In et dignissim quam condimentum vel.
+        <p className="text-lg text-gray-700 dark:text-gray-300 mb-14 max-w-2xl mx-auto">
+          From discovery to launch, we guide you through every step of your software project with clarity and care.
         </p>
-      </div>
-
-      <section className="relative max-w-5xl mx-auto py-10 px-4">
-        {/* vertical line */}
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gray-300 dark:bg-gray-700" />
-
-        {/* timeline events */}
-        <div className="flex flex-col space-y-10">
-          {events.map((event, index) => {
-            const isLeft = event.side === 'left';
+        <div className="flex flex-col gap-12 relative">
+          {/* Vertical line */}
+          <div className="absolute left-1/2 top-0 h-full w-1 bg-gradient-to-b from-blue-300 via-indigo-300 to-transparent dark:from-blue-900 dark:via-indigo-900 dark:to-transparent -translate-x-1/2 z-0" />
+          {steps.map((step, idx) => {
+            const isLeft = idx % 2 === 0;
             return (
-              <div key={index} className="relative flex justify-between items-center w-full">
-                {/* Timeline content */}
-                <div className={`w-5/12 ${isLeft ? 'order-1 text-right' : 'order-3 text-left'}`}>
-                  <div className="bg-[#f8f9fd] dark:bg-gray-800 p-6 rounded-lg shadow-md transition-all duration-300">
-                    <h4 className="mb-2 text-xl font-semibold text-black dark:text-white">{event.date}</h4>
-                    <p className="text-base font-medium text-gray-600 dark:text-gray-300">
-                      {event.text}
-                    </p>
-                    <div className="inline-flex items-center rounded-full bg-white p-2 pr-3 mt-4">
-                      <img src={event.logo} alt={event.name} className="mr-2 w-5 h-5" />
-                      <span className="text-sm font-semibold text-blue-600">{event.name} {event.growth}</span>
+              <div
+                key={step.title}
+                data-aos="fade-up"
+                data-aos-delay={idx * 120}
+                className={`relative flex flex-col md:flex-row items-center z-10 ${isLeft ? 'md:justify-start' : 'md:justify-end'}`}
+              >
+                <div className={`md:w-1/2 ${isLeft ? 'md:pr-12' : 'md:pl-12'} w-full flex ${isLeft ? 'justify-end' : 'justify-start'}`}>
+                  <div className="bg-white/80 dark:bg-gray-800/80 rounded-2xl shadow-lg p-8 border border-gray-100 dark:border-gray-700 max-w-md w-full text-left">
+                    <div className="mb-4 text-3xl flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-blue-500 to-indigo-500 text-white shadow-lg animate-pulse">
+                      {step.icon}
                     </div>
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 tracking-wide">{step.title}</h3>
+                    <p className="text-gray-600 dark:text-gray-300 text-base">{step.desc}</p>
                   </div>
                 </div>
-
-                {/* center dot */}
-                <div className="z-10 flex items-center justify-center order-2">
-                  <div className="w-5 h-5 bg-blue-600 rounded-full border-2 border-white dark:border-gray-900" />
+                {/* Timeline dot */}
+                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+                  <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-full border-4 border-white dark:border-gray-900 shadow-lg animate-glow" />
                 </div>
-
-                {/* Remove this extra empty space div to avoid right side dots */}
-                {/* <div className="w-5/12 order-1" /> */}
-                {/* Keep the spacing proper by rendering empty div only for left side events */}
-                {isLeft ? <div className="w-5/12 order-3" /> : null}
               </div>
             );
           })}
         </div>
-      </section>
-    </>
+      </div>
+      {/* Custom CSS for animated gradient and glow */}
+      <style>{`
+        @keyframes gradientBG {
+          0%, 100% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+        }
+        .animate-gradient {
+          background-size: 200% 200%;
+          animation: gradientBG 8s ease-in-out infinite;
+        }
+        @keyframes glow {
+          0%, 100% { box-shadow: 0 0 0 0 rgba(59,130,246,0.3), 0 0 0 0 rgba(99,102,241,0.2); }
+          50% { box-shadow: 0 0 24px 8px rgba(59,130,246,0.4), 0 0 32px 16px rgba(99,102,241,0.3); }
+        }
+        .animate-glow {
+          animation: glow 2.5s infinite;
+        }
+      `}</style>
+    </section>
   );
 };
 

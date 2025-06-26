@@ -1,96 +1,60 @@
 import React from 'react';
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
-import logo from '../assets/cryptologo.svg';
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube, FaEnvelope, FaPhone } from 'react-icons/fa';
+import logo from '../assets/Devlayers logo (1).svg';
 
 const Footer = () => {
   return (
-    <footer data-aos="fade-up" className="relative z-10 pt-28 bg-gray-50 dark:bg-gray-900">
+    <footer data-aos="fade-up" className="relative z-10 pt-16 pb-8 bg-gradient-to-br from-blue-100 via-indigo-100 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap -mx-4">
-
+        <div className="flex flex-wrap justify-between items-center gap-8">
           {/* Logo and Description */}
-          <div className="w-full px-4 md:w-1/2 lg:w-4/12 mb-14 xl:mb-20">
-            <a href="/" className="inline-block mb-6">
-              <img 
-                src={logo} 
-                alt="Logo" 
-                className="block dark:hidden" 
-                width="176" height="46"
+          <div className="flex flex-col items-start max-w-xs">
+            <a href="/" className="inline-block mb-4">
+              <img
+                src={logo}
+                alt="Devlayers Logo"
+                className="block dark:hidden h-12 w-auto"
               />
-              <img 
-                src={logo} 
-                alt="Logo" 
-                className="hidden dark:block" 
-                width="176" height="46"
+              <img
+                src={logo}
+                alt="Devlayers Logo"
+                className="hidden dark:block h-12 w-auto"
               />
             </a>
-            <p className="mb-10 text-base font-medium text-gray-600 dark:text-gray-300">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae quam nec ante fringilla.
+            <p className="mb-4 text-base font-medium text-gray-600 dark:text-gray-300">
+              Building robust web, mobile, and cloud solutions for businesses worldwide. Your trusted software development partner.
             </p>
-            <div className="flex space-x-3">
-              <a href="#" className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-white hover:bg-primary hover:text-white">
-                <FaFacebookF size={18} />
+            <div className="flex space-x-3 mt-2">
+              <a href="#" className="flex items-center justify-center w-9 h-9 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-white hover:bg-blue-600 hover:text-white transition">
+                <FaFacebookF size={16} />
               </a>
-              <a href="#" className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-white hover:bg-primary hover:text-white">
-                <FaTwitter size={18} />
+              <a href="#" className="flex items-center justify-center w-9 h-9 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-white hover:bg-blue-400 hover:text-white transition">
+                <FaTwitter size={16} />
               </a>
-              <a href="#" className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-white hover:bg-primary hover:text-white">
-                <FaLinkedinIn size={18} />
+              <a href="#" className="flex items-center justify-center w-9 h-9 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-white hover:bg-blue-700 hover:text-white transition">
+                <FaLinkedinIn size={16} />
               </a>
-              <a href="#" className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-white hover:bg-primary hover:text-white">
-                <FaYoutube size={18} />
+              <a href="#" className="flex items-center justify-center w-9 h-9 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-white hover:bg-red-600 hover:text-white transition">
+                <FaYoutube size={16} />
               </a>
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div className="w-full px-4 sm:w-1/2 lg:w-4/12 xl:w-2/12 mb-14 xl:mb-20">
-            <h4 className="mb-5 text-2xl font-bold text-black dark:text-white">Quick Links</h4>
-            <ul className="space-y-3 text-base text-gray-600 dark:text-gray-300">
-              <li><a href="#" className="hover:text-primary">What is ICO</a></li>
-              <li><a href="#" className="hover:text-primary">Roadmap</a></li>
-              <li><a href="#" className="hover:text-primary">Whitepaper</a></li>
-              <li><a href="#" className="hover:text-primary">Social Network</a></li>
-              <li><a href="#" className="hover:text-primary">Join Us Now</a></li>
-            </ul>
-          </div>
-
-          {/* Supports */}
-          <div className="w-full px-4 sm:w-1/2 lg:w-4/12 xl:w-2/12 mb-14 xl:mb-20">
-            <h4 className="mb-5 text-2xl font-bold text-black dark:text-white">Supports</h4>
-            <ul className="space-y-3 text-base text-gray-600 dark:text-gray-300">
-              <li><a href="#" className="hover:text-primary">Setting & Privacy</a></li>
-              <li><a href="#" className="hover:text-primary">Help & Support</a></li>
-              <li><a href="#" className="hover:text-primary">Terms & Conditions</a></li>
-              <li><a href="#" className="hover:text-primary">24/7 Supports</a></li>
-              <li><a href="#" className="hover:text-primary">On Point FAQ</a></li>
-            </ul>
-          </div>
-
-          {/* News & Posts */}
-          <div className="w-full px-4 md:w-1/2 lg:w-1/2 xl:w-4/12 mb-14 xl:mb-20">
-            <h4 className="mb-5 text-2xl font-bold text-black dark:text-white">News & Post</h4>
-            <div className="space-y-3">
-              <div className="flex">
-                <div className="w-[75px] h-[75px] rounded-md overflow-hidden mr-5">
-                  <a href="/blog/laboris-nisi-aliquip-dium-exiuliym-commo-cons">
-                    <img 
-                      src="https://cdn.sanity.io/images/d33zuypx/production/a0ca7f2ce7b15da5c3c4bb79e6856ab013fce446-970x430.jpg" 
-                      alt="blog" 
-                      className="object-cover w-full h-full"
-                    />
-                  </a>
-                </div>
-                <div>
-                  <a href="/blog/laboris-nisi-aliquip-dium-exiuliym-commo-cons" className="block text-base font-medium text-gray-600 dark:text-gray-300 hover:text-primary">
-                    Laboris nisi aliquip dium exiuliym commo cons
-                  </a>
-                </div>
-              </div>
-              {/* Add more posts similarly here */}
+          {/* Contact Info */}
+          <div className="flex flex-col gap-4 text-base text-gray-700 dark:text-gray-200">
+            <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Contact Us</h4>
+            <div className="flex items-center gap-2">
+              <FaEnvelope className="text-blue-600 dark:text-blue-400" />
+              <a href="mailto:info@devlayers.com" className="hover:text-blue-600 transition">info@devlayers.com</a>
+            </div>
+            <div className="flex items-center gap-2">
+              <FaPhone className="text-blue-600 dark:text-blue-400" />
+              <a href="tel:03168555118" className="hover:text-blue-600 transition">03168555118</a>
             </div>
           </div>
-
+        </div>
+        <div className="mt-8 border-t border-gray-200 dark:border-gray-700 pt-4 text-center text-sm text-gray-500 dark:text-gray-400">
+          © {new Date().getFullYear()} Devlayers. All rights reserved.
         </div>
       </div>
     </footer>

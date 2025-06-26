@@ -1,73 +1,53 @@
-import React from 'react';
-import appImage from '../assets/app-image.webp';
+const reasons = [
+  { icon: '⚡', title: 'Agile & Transparent', desc: 'We keep you in the loop at every stage.' },
+  { icon: '🛠️', title: 'Custom Solutions', desc: 'Every project is tailored to your needs.' },
+  { icon: '🤝', title: 'Long-Term Partners', desc: 'We build relationships, not just software.' },
+  { icon: '📈', title: 'Proven Results', desc: '100+ successful projects delivered.' },
+  { icon: '🧑‍💻', title: 'Expert Team', desc: 'Certified developers and project managers.' },
+  { icon: '🌐', title: 'Modern Tech', desc: 'We use the latest frameworks and tools.' },
+];
 
-export default function Downloads() {
+export default function WhyChooseUs() {
   return (
-    <section data-aos="fade-up" id="download" className="py-24">
-      <div className="container">
-        <div className="flex flex-wrap items-center justify-center">
-          {/* Left Section */}
-          <div className="w-full px-4 lg:w-1/2 flex justify-center">
-            <div>
-              <div className="mb-12 max-w-[500px] lg:mb-0">
-                <span className="text-primary mb-3 text-lg font-bold uppercase sm:text-xl">
-                  Download Our App
-                </span>
-                <h2 className="mb-3 text-3xl leading-tight font-bold text-black md:text-[45px] dark:text-white">
-                  The choice is yours, we've got you covered
-                </h2>
-                <p className="text-body-color-2 dark:text-body-color mb-10 text-lg font-medium">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-                </p>
-
-                {/* App Store & Play Store Buttons */}
-                <div className="-mx-3 flex items-center">
-                  <div className="px-3">
-                    <a
-                      className="flex items-center justify-center rounded-full border border-[#2D2947] bg-[#2D2947] p-2.5 pr-5 text-base font-semibold text-white hover:bg-[#2D2947]/90"
-                      href="#"
-                    >
-                      <span className="bg-primary mr-3 flex h-10 w-10 items-center justify-center rounded-full text-white">
-                        {/* Apple Icon */}
-                      </span>
-                      App Store
-                    </a>
-                  </div>
-                  <div className="px-3">
-                    <a
-                      className="flex items-center justify-center rounded-full border border-[#2D2947] bg-transparent p-[10px] pr-5 text-base font-semibold hover:bg-[#2D294710]"
-                      href="#"
-                    >
-                      <span className="mr-3 flex h-10 w-10 items-center justify-center rounded-full text-white bg-white">
-                        {/* Play Icon */}
-                      </span>
-                      Play Store
-                    </a>
-                  </div>
-                </div>
+    <section className="relative py-20 overflow-hidden">
+      <div className="absolute inset-0 -z-10 animate-gradient bg-gradient-to-br from-blue-100 via-indigo-100 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900" />
+      <div className="max-w-6xl mx-auto px-4 text-center relative z-10">
+        <span className="inline-block px-4 py-1 mb-4 rounded-full bg-white/80 dark:bg-gray-900/80 text-blue-700 dark:text-blue-300 font-semibold shadow">
+          Why Choose Us
+        </span>
+        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-6 tracking-tight">
+          What Sets Us Apart
+        </h2>
+        <p className="text-lg text-gray-700 dark:text-gray-300 mb-14 max-w-2xl mx-auto">
+          Discover the reasons clients trust us with their most important software projects.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          {reasons.map((reason, idx) => (
+            <div
+              key={reason.title}
+              data-aos="zoom-in-up"
+              data-aos-delay={idx * 100}
+              className="bg-white/80 dark:bg-gray-800/80 rounded-2xl shadow-lg p-8 flex flex-col items-center border border-gray-100 dark:border-gray-700 transition transform hover:-translate-y-2 hover:shadow-2xl"
+            >
+              <div className="mb-6 text-5xl flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-indigo-500 text-white shadow-lg">
+                {reason.icon}
               </div>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 tracking-wide">{reason.title}</h3>
+              <p className="text-gray-600 dark:text-gray-300 text-base">{reason.desc}</p>
             </div>
-          </div>
-
-          {/* Right Section */}
-          <div className="w-full px-4 lg:w-1/2 flex justify-center">
-            <div className="text-center relative z-10">
-              <img
-                alt="app image"
-                loading="lazy"
-                width="504"
-                height="546"
-                className="mx-auto"
-                src={appImage}
-              />
-              <span
-                className="absolute bottom-0 right-0 -z-10 h-[320px] w-[320px] rounded-full"
-                style={{ filter: 'blur(100px)' }}
-              ></span>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
+      <style>{`
+        @keyframes gradientBG {
+          0%, 100% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+        }
+        .animate-gradient {
+          background-size: 200% 200%;
+          animation: gradientBG 8s ease-in-out infinite;
+        }
+      `}</style>
     </section>
   );
 }

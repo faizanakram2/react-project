@@ -27,10 +27,10 @@ function App() {
       <TeamSection />
       <Testimonials />
       <Download />
-      <FaqSection />
-      <Latestnews />
-      <Contact />
-      <Newsletter />
+      {/* <FaqSection /> */}
+      {/* <Latestnews /> */}
+      {/* <Contact /> */}
+      {/* <Newsletter /> */}
       <Footer />
     </div>
   );

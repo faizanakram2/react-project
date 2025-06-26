@@ -1,83 +1,87 @@
 import React from 'react';
-import testimonialShape from '../assets/testimonial-shape.svg';
-import image01 from '../assets/image-01 (1).webp';
-import image02 from '../assets/image-02 (1).webp';
-import image03 from '../assets/image-03 (1).webp';
-import image04 from '../assets/image-04 (1).webp';
 
 const testimonials = [
     {
-        id: 1,
-        name: 'Jason Keys',
-        role: 'CEO & Founder @ Dreampeet',
-        image: image01,
-        text: "I believe in lifelong learning and Learn. is a great place to learn from experts. I've learned a lot and recommend it to all my friends and family."
+        name: 'Sarah Williams',
+        role: 'CTO, FinTech Startup',
+        text: "The team delivered our web application on time and exceeded our expectations. Their technical expertise and communication were outstanding!"
     },
     {
-        id: 2,
-        name: 'Mariya Merry',
-        role: 'CEO & Founder @ Betex',
-        image: image02,
-        text: "I believe in lifelong learning and Learn. is a great place to learn from experts. I've learned a lot and recommend it to all my friends and family."
+        name: 'Michael Chen',
+        role: 'Product Manager, HealthTech Co.',
+        text: "Excellent collaboration and attention to detail. Our mobile app launch was a huge success thanks to their dedication."
     },
     {
-        id: 3,
-        name: 'Andria Jolly',
-        role: 'CEO & Founder @ CryptoX',
-        image: image03,
-        text: "I believe in lifelong learning and Learn. is a great place to learn from experts. I've learned a lot and recommend it to all my friends and family."
+        name: 'Priya Patel',
+        role: 'CEO, SaaS Platform',
+        text: "They provided valuable insights and delivered a robust cloud solution for our business. Highly recommended for any software project."
     },
     {
-        id: 4,
-        name: 'Devid Willium',
-        role: 'CEO & Founder @ Coinbase',
-        image: image04,
-        text: "I believe in lifelong learning and Learn. is a great place to learn from experts. I've learned a lot and recommend it to all my friends and family."
-    }
+        name: 'David Kim',
+        role: 'Founder, E-commerce Brand',
+        text: "Professional, reliable, and creative. The UI/UX design and development process was smooth from start to finish."
+    },
+    {
+        name: 'Emily Brown',
+        role: 'COO, Logistics Company',
+        text: "Their agile approach and ongoing support made our digital transformation seamless and stress-free."
+    },
 ];
 
-const TestimonialCard = ({ testimonial }) => (
-    <div data-aos="fade-up" className="w-full px-4 md:w-1/2">
-        <div className="relative z-10 mb-10 overflow-hidden rounded-[10px] bg-white px-6 py-8 sm:p-10 md:p-8 xl:p-10 dark:bg-[#131B4D]">
-            <div className="absolute top-0 right-0 z-[-1]">
-                <img src={testimonialShape} alt="shape" width={254} height={182} />
-            </div>
-            <div className="mb-8 flex items-center">
-                <div className="mr-5 h-20 w-full max-w-[80px] overflow-hidden rounded-sm">
-                    <img src={testimonial.image} alt={testimonial.name} className="h-full object-cover" width={80} height={80} />
-                </div>
-                <div className="w-full">
-                    <h3 className="text-dark mb-1 text-lg font-semibold dark:text-white">{testimonial.name}</h3>
-                    <p className="text-body-color-2 text-sm font-medium dark:text-white">{testimonial.role}</p>
-                </div>
-            </div>
-            <p className="text-body-color-2 dark:text-body-color text-base leading-snug font-medium">
-                “{testimonial.text}”
-            </p>
-        </div>
-    </div>
-);
-
-const Testimonials = () => {
+export default function Testimonials() {
     return (
-        <div className="container mx-auto px-4">
-            <div className="mx-auto mb-16 max-w-[590px] text-center md:mb-20">
-                <span className="text-primary mb-3 text-lg font-bold uppercase sm:text-xl">TESTIMONIALS</span>
-                <h2 className="mb-3 text-3xl leading-tight font-bold text-black md:text-[45px] dark:text-white">
-                    What Our Client Say's
+        <section data-aos="fade-up" className="relative py-20 overflow-hidden">
+            {/* Animated gradient background */}
+            <div className="absolute inset-0 -z-10 animate-gradient bg-gradient-to-br from-blue-100 via-indigo-100 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900" />
+            <div className="max-w-6xl mx-auto px-4 text-center relative z-10">
+                <span className="inline-block px-4 py-1 mb-4 rounded-full bg-white/80 dark:bg-gray-900/80 text-blue-700 dark:text-blue-300 font-semibold shadow">
+                    Testimonials
+                </span>
+                <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-6 tracking-tight">
+                    What Our Clients Say
                 </h2>
-                <p className="text-body-color-2 dark:text-body-color text-lg font-medium">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed congue arcu, In et dignissim quam condimentum vel.
+                <p className="text-lg text-gray-700 dark:text-gray-300 mb-14 max-w-2xl mx-auto">
+                    Hear from our clients about their experience working with our software development team.
                 </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                    {testimonials.map((testimonial, idx) => (
+                        <div
+                            key={testimonial.name}
+                            data-aos="zoom-in-up"
+                            data-aos-delay={idx * 120}
+                            className="relative bg-white/80 dark:bg-gray-800/80 rounded-2xl shadow-lg p-8 flex flex-col items-center border border-gray-100 dark:border-gray-700 transition transform hover:-translate-y-2 hover:shadow-2xl"
+                        >
+                            {/* Quote icon background */}
+                            <span className="absolute top-6 left-6 text-5xl text-blue-100 dark:text-indigo-900 opacity-40 pointer-events-none select-none">“</span>
+                            {/* Avatar initials */}
+                            <div className="mb-6 flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-indigo-500 text-white text-3xl font-bold shadow-lg animate-bounce-slow">
+                                {testimonial.name.split(' ').map(n => n[0]).join('')}
+                            </div>
+                            <p className="text-gray-700 dark:text-gray-200 text-lg italic mb-6 relative z-10">{testimonial.text}</p>
+                            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1 tracking-wide">{testimonial.name}</h3>
+                            <p className="text-indigo-600 dark:text-indigo-300 font-medium">{testimonial.role}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
-
-            <div className="-mx-4 flex flex-wrap">
-                {testimonials.map((testimonial) => (
-                    <TestimonialCard key={testimonial.id} testimonial={testimonial} />
-                ))}
-            </div>
-        </div>
+            {/* Custom CSS for animated gradient and bounce */}
+            <style>{`
+        @keyframes gradientBG {
+          0%, 100% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+        }
+        .animate-gradient {
+          background-size: 200% 200%;
+          animation: gradientBG 8s ease-in-out infinite;
+        }
+        @keyframes bounce-slow {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-12px); }
+        }
+        .animate-bounce-slow {
+          animation: bounce-slow 2.5s infinite;
+        }
+      `}</style>
+        </section>
     );
-};
-
-export default Testimonials;
+}

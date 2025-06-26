@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 import { BsSun, BsMoon } from 'react-icons/bs';
-import logo from '../assets/cryptologo.svg';
+import logo from '../assets/Devlayers logo (1).svg';
 
 const Navbar = () => {
   const [theme, setTheme] = useState(() => {
@@ -50,7 +50,7 @@ const Navbar = () => {
     >
       {/* Left: Logo */}
       <div className="flex items-center">
-        <img src={logo} alt="Crypto Logo" className="h-8 w-auto" />
+        <img src={logo} alt="logo" className="h-8 w-auto" />
       </div>
 
       {/* Center: Links */}

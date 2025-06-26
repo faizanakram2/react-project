@@ -1,34 +1,35 @@
 // src/components/TeamSection.jsx
 import React from "react";
+import { MdEdit } from 'react-icons/md';
 
 const values = [
   {
-    icon: '🤝',
+    icon: <MdEdit size={36} />,
     title: 'Client Collaboration',
     desc: 'We work closely with our clients, ensuring transparency and partnership at every stage.'
   },
   {
-    icon: '🚀',
+    icon: <MdEdit size={36} />,
     title: 'Innovation',
     desc: 'We embrace new technologies and creative solutions to deliver cutting-edge software.'
   },
   {
-    icon: '🔒',
+    icon: <MdEdit size={36} />,
     title: 'Security First',
     desc: 'Your data and business are protected with industry-leading security practices.'
   },
   {
-    icon: '⚡',
+    icon: <MdEdit size={36} />,
     title: 'Agile Delivery',
     desc: 'We use agile methodologies to deliver results quickly and adapt to your needs.'
   },
   {
-    icon: '🌍',
+    icon: <MdEdit size={36} />,
     title: 'Global Perspective',
     desc: 'Our diverse team brings global experience and best practices to every project.'
   },
   {
-    icon: '💡',
+    icon: <MdEdit size={36} />,
     title: 'Continuous Learning',
     desc: 'We invest in ongoing learning to stay ahead in a fast-changing tech landscape.'
   },

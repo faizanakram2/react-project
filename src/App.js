@@ -29,7 +29,7 @@ function App() {
       <Download />
       {/* <FaqSection /> */}
       {/* <Latestnews /> */}
-      {/* <Contact /> */}
+      <Contact />
       {/* <Newsletter /> */}
       <Footer />
     </div>

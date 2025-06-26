@@ -23,7 +23,7 @@ export default function ContactSection() {
               </div>
               <div>
                 <h4 className="font-semibold mb-2">Phone Number</h4>
-                <p>+990 846 73644<br />+550 9475 4543</p>
+                <p><br />+92 316 8555118</p>
               </div>
               <div>
                 <h4 className="font-semibold mb-2">How Can We Help?</h4>

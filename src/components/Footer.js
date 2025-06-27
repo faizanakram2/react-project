@@ -4,27 +4,27 @@ import logo from '../assets/Devlayers logo (1).svg';
 
 const Footer = () => {
   return (
-    <footer data-aos="fade-up" className="relative z-10 pt-16 pb-8 bg-gradient-to-br from-blue-100 via-indigo-100 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+    <footer data-aos="fade-up" className="relative z-10 pt-14 pb-6 bg-gradient-to-br from-blue-100 via-indigo-100 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap justify-between items-center gap-8">
+        <div className="flex flex-col md:flex-row flex-wrap justify-between items-center gap-10 md:gap-8">
           {/* Logo and Description */}
-          <div className="flex flex-col items-start max-w-xs">
+          <div className="flex flex-col items-center md:items-start max-w-xs text-center md:text-left w-full md:w-auto">
             <a href="/" className="inline-block mb-4">
               <img
                 src={logo}
                 alt="Devlayers Logo"
-                className="block dark:hidden h-12 w-auto"
+                className="block dark:hidden h-12 w-auto mx-auto md:mx-0"
               />
               <img
                 src={logo}
                 alt="Devlayers Logo"
-                className="hidden dark:block h-12 w-auto"
+                className="hidden dark:block h-12 w-auto mx-auto md:mx-0"
               />
             </a>
             <p className="mb-4 text-base font-medium text-gray-600 dark:text-gray-300">
               Building robust web, mobile, and cloud solutions for businesses worldwide. Your trusted software development partner.
             </p>
-            <div className="flex space-x-3 mt-2">
+            <div className="flex space-x-3 mt-2 justify-center md:justify-start">
               <a href="#" className="flex items-center justify-center w-9 h-9 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-white hover:bg-blue-600 hover:text-white transition">
                 <FaFacebookF size={16} />
               </a>
@@ -41,7 +41,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="flex flex-col gap-4 text-base text-gray-700 dark:text-gray-200">
+          <div className="flex flex-col gap-3 text-base text-gray-700 dark:text-gray-200 items-center md:items-end w-full md:w-auto">
             <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Contact Us</h4>
             <div className="flex items-center gap-2">
               <FaEnvelope className="text-blue-600 dark:text-blue-400" />
@@ -53,7 +53,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="mt-8 border-t border-gray-200 dark:border-gray-700 pt-4 text-center text-sm text-gray-500 dark:text-gray-400">
+        <div className="mt-10 border-t border-gray-200 dark:border-gray-700 pt-4 text-center text-sm text-gray-500 dark:text-gray-400">
           © {new Date().getFullYear()} Devlayers. All rights reserved.
         </div>
       </div>

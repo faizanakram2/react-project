@@ -6,7 +6,7 @@ import Features from './components/Features';
 import TokenSaleSection from './components/TokenSales';
 import Timeline from './components/Timeline';
 import TeamSection from './components/TeamSection';
-import Testimonials from './components/Testimonials';
+// import Testimonials from './components/Testimonials';
 import Download from './components/Download';
 import FaqSection from './components/Faq';
 import Latestnews from './components/Latestnews';
@@ -25,7 +25,7 @@ function App() {
       <TokenSaleSection />
       <Timeline />
       <TeamSection />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Download />
       {/* <FaqSection /> */}
       {/* <Latestnews /> */}

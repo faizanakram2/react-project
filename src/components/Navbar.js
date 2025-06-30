@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import logo from '../assets/Devlayers logo (1).svg';
+import logo from '../assets/Group 15 (2).png';
 
 const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);

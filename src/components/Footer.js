@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube, FaEnvelope, FaPhone } from 'react-icons/fa';
-import logo from '../assets/Devlayers logo (1).svg';
+import logo from '../assets/Group 15 (2).png';
 
 const Footer = () => {
   return (
@@ -20,6 +20,7 @@ const Footer = () => {
                 alt="Devlayers Logo"
                 className="hidden dark:block h-12 w-auto mx-auto md:mx-0"
               />
+              <h1 classname ></h1>
             </a>
             <p className="mb-4 text-base font-medium text-gray-600 dark:text-gray-300">
               Building robust web, mobile, and cloud solutions for businesses worldwide. Your trusted software development partner.
@@ -28,14 +29,8 @@ const Footer = () => {
               <a href="#" className="flex items-center justify-center w-9 h-9 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-white hover:bg-blue-600 hover:text-white transition">
                 <FaFacebookF size={16} />
               </a>
-              <a href="#" className="flex items-center justify-center w-9 h-9 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-white hover:bg-blue-400 hover:text-white transition">
-                <FaTwitter size={16} />
-              </a>
               <a href="#" className="flex items-center justify-center w-9 h-9 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-white hover:bg-blue-700 hover:text-white transition">
                 <FaLinkedinIn size={16} />
-              </a>
-              <a href="#" className="flex items-center justify-center w-9 h-9 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-white hover:bg-red-600 hover:text-white transition">
-                <FaYoutube size={16} />
               </a>
             </div>
           </div>
@@ -44,8 +39,10 @@ const Footer = () => {
           <div className="flex flex-col gap-3 text-base text-gray-700 dark:text-gray-200 items-center md:items-end w-full md:w-auto">
             <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Contact Us</h4>
             <div className="flex items-center gap-2">
-              <FaEnvelope className="text-blue-600 dark:text-blue-400" />
-              <a href="mailto:info@devlayers.com" className="hover:text-blue-600 transition">info@devlayers.com</a>
+              <span className="flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-br from-blue-500 to-indigo-400 text-white">
+                <FaEnvelope size={16} />
+              </span>
+              <a href="mailto:devlayers.official@gmail.com" className="hover:text-blue-600 transition">devlayers.official@gmail.com</a>
             </div>
             <div className="flex items-center gap-2">
               <FaPhone className="text-blue-600 dark:text-blue-400" />

@@ -16,13 +16,13 @@ export default function ContactSection() {
               <p className="text-gray-600 text-lg mb-6">Ready to build something amazing? Reach out and our team will get back to you within 24 hours.</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm">
-              <div className="bg-white/60 dark:bg-gray-900/60 rounded-2xl shadow-xl border border-white/40 dark:border-gray-800/40 p-6 flex items-center gap-4 backdrop-blur-md hover:shadow-2xl transition animate-fadein" data-aos="fade-up" data-aos-delay="200">
+              <div className="bg-white/60 dark:bg-gray-900/60 rounded-2xl shadow-xl border border-white/40 dark:border-gray-800/40 p-6 flex items-center gap-4 backdrop-blur-md hover:shadow-2xl transition animate-fadein" data-aos="fade-up" data-aos-delay="300">
                 <span className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-indigo-400 text-white text-2xl shadow-lg">
                   <FaEnvelope />
                 </span>
                 <div>
-                  <h4 className="font-semibold mb-1 text-gray-900 dark:text-white">Email</h4>
-                  <a href="mailto:info@devlayers.com" className="text-blue-600 hover:underline">info@devlayers.com</a>
+                  <h4 className="font-semibold mb-1 text-gray-900 dark:text-white w-3rem">Email</h4>
+                  <a href="mailto:devlayers.official@gmail.com" className="text-blue-600 hover:underline">devlayers.official@gmail.com</a>
                 </div>
               </div>
               <div className="bg-white/60 dark:bg-gray-900/60 rounded-2xl shadow-xl border border-white/40 dark:border-gray-800/40 p-6 flex items-center gap-4 backdrop-blur-md hover:shadow-2xl transition animate-fadein" data-aos="fade-up" data-aos-delay="300">
@@ -32,15 +32,6 @@ export default function ContactSection() {
                 <div>
                   <h4 className="font-semibold mb-1 text-gray-900 dark:text-white">Phone</h4>
                   <a href="tel:+92 304 6193793" className="text-blue-600 hover:underline">+92 304 6193793</a>
-                </div>
-              </div>
-              <div className="bg-white/60 dark:bg-gray-900/60 rounded-2xl shadow-xl border border-white/40 dark:border-gray-800/40 p-6 flex items-center gap-4 backdrop-blur-md hover:shadow-2xl transition animate-fadein sm:col-span-2" data-aos="fade-up" data-aos-delay="400">
-                <span className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-indigo-500 text-white text-2xl shadow-lg">
-                  <FaRegCommentDots />
-                </span>
-                <div>
-                  <h4 className="font-semibold mb-1 text-gray-900 dark:text-white">How Can We Help?</h4>
-                  <p className="text-gray-600 dark:text-gray-300">Tell us your problem and we'll get back to you ASAP.</p>
                 </div>
               </div>
             </div>

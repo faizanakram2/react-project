@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube, FaEnvelope, FaPhone } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube, FaEnvelope, FaPhone, FaInstagram } from 'react-icons/fa';
 import logo from '../assets/Group 15 (2).png';
 
 const Footer = () => {
@@ -26,11 +26,14 @@ const Footer = () => {
               Building robust web, mobile, and cloud solutions for businesses worldwide. Your trusted software development partner.
             </p>
             <div className="flex space-x-3 mt-2 justify-center md:justify-start">
-              <a href="#" className="flex items-center justify-center w-9 h-9 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-white hover:bg-blue-600 hover:text-white transition">
+              <a href="https://www.facebook.com/people/Dev-Layers/61577244716890/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-9 h-9 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-white hover:bg-blue-600 hover:text-white transition">
                 <FaFacebookF size={16} />
               </a>
-              <a href="#" className="flex items-center justify-center w-9 h-9 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-white hover:bg-blue-700 hover:text-white transition">
+              <a href="https://www.linkedin.com/company/dev-layers/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-9 h-9 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-white hover:bg-blue-700 hover:text-white transition">
                 <FaLinkedinIn size={16} />
+              </a>
+              <a href="https://www.instagram.com/dev_layers?igsh=aWJieGNvZ2lueDdx" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-9 h-9 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-white hover:bg-pink-500 hover:text-white transition">
+                <FaInstagram size={16} />
               </a>
             </div>
           </div>

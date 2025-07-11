@@ -14,6 +14,9 @@ import Contact from './components/Contact';
 import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
 import BackgroundWaves from './components/Backgroundwaves';
+import logo from './assets/IMG_7880.jpg';
+
+<img src={logo} alt="Logo" />
 function App() {
   return (
     <div>

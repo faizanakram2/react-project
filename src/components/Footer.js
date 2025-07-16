@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube, FaEnvelope, FaPhone, FaInstagram } from 'react-icons/fa';
+import { FaFacebookF, FaLinkedinIn,FaEnvelope, FaPhone, FaInstagram } from 'react-icons/fa';
 import logo from '../assets/Group 15 (2).png';
 
 const Footer = () => {
@@ -45,7 +45,7 @@ const Footer = () => {
               <span className="flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-br from-blue-500 to-indigo-400 text-white">
                 <FaEnvelope size={16} />
               </span>
-              <a href="mailto:devlayers.official@gmail.com" className="hover:text-blue-600 transition">devlayers.official@gmail.com</a>
+              <a href="mailto:devlayers.official@gmail.com" className="hover:text-blue-600 transition">info@devlayers.org</a>
             </div>
             <div className="flex items-center gap-2">
               <FaPhone className="text-blue-600 dark:text-blue-400" />

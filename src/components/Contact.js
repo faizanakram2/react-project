@@ -1,5 +1,5 @@
 import React from "react";
-import { FaEnvelope, FaPhone, FaRegCommentDots } from 'react-icons/fa';
+import { FaEnvelope, FaPhone } from 'react-icons/fa';
 
 export default function ContactSection() {
   return (
@@ -17,16 +17,16 @@ export default function ContactSection() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm">
               <div className="bg-white/60 dark:bg-gray-900/60 rounded-2xl shadow-xl border border-white/40 dark:border-gray-800/40 p-6 flex items-start gap-3 backdrop-blur-md hover:shadow-2xl transition animate-fadein" data-aos="fade-up" data-aos-delay="300">
-  <span className="flex items-center justify-center w-12 h-12 aspect-square rounded-full bg-gradient-to-br from-blue-500 to-indigo-400 text-white shadow-lg">
-    <FaEnvelope className="text-xl" />
-  </span>
-  <div className="w-full">
-    <h4 className="font-semibold mb-1 text-gray-900 dark:text-white">Email</h4>
-    <a href="mailto:devlayers.official@gmail.com" className="text-blue-600 hover:underline break-words">
-    info@devlayers.org
-    </a>
-  </div>
-</div>
+                <span className="flex items-center justify-center w-12 h-12 aspect-square rounded-full bg-gradient-to-br from-blue-500 to-indigo-400 text-white shadow-lg">
+                  <FaEnvelope className="text-xl" />
+                </span>
+                <div className="w-full">
+                  <h4 className="font-semibold mb-1 text-gray-900 dark:text-white">Email</h4>
+                  <a href="mailto:devlayers.official@gmail.com" className="text-blue-600 hover:underline break-words">
+                    info@devlayers.org
+                  </a>
+                </div>
+              </div>
               <div className="bg-white/60 dark:bg-gray-900/60 rounded-2xl shadow-xl border border-white/40 dark:border-gray-800/40 p-6 flex items-center gap-4 backdrop-blur-md hover:shadow-2xl transition animate-fadein" data-aos="fade-up" data-aos-delay="300">
                 <span className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-indigo-500 to-blue-400 text-white text-2xl shadow-lg p-2">
                   <FaPhone className="w-6 h-6" />

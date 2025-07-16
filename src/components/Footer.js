@@ -24,7 +24,7 @@ const Footer = () => {
             </a>
             <p className="mb-4 text-base font-medium text-gray-600 dark:text-gray-300">
               Building robust web, mobile, and cloud solutions for businesses worldwide. Your trusted software development partner.
-            </p>
+            </p> hello my name is faizan akram and am software engineer and i do study and also i do different jobs and 
             <div className="flex space-x-3 mt-2 justify-center md:justify-start">
               <a href="https://www.facebook.com/people/Dev-Layers/61577244716890/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-9 h-9 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-white hover:bg-blue-600 hover:text-white transition">
                 <FaFacebookF size={16} />

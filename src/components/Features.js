@@ -1,33 +1,38 @@
-import React from 'react';
+import { MdDevices } from 'react-icons/md';
+import { TbPencilCode } from 'react-icons/tb';
+import { HiOutlineCloud } from 'react-icons/hi';
+import { RiTestTubeLine } from 'react-icons/ri';
+import { FaRegLightbulb } from 'react-icons/fa';
+import { BiSupport } from 'react-icons/bi';
 
 const features = [
   {
-    icon: '💻',
+    icon: <MdDevices size={36} />,
     title: 'Web & Mobile Development',
     desc: 'Custom web and mobile applications built with the latest technologies for your business needs.'
   },
   {
-    icon: '🎨',
+    icon: <TbPencilCode size={36} />,
     title: 'UI/UX Design',
     desc: 'Intuitive, engaging, and user-centered design for delightful digital experiences.'
   },
-  {
-    icon: '☁️',
+  {    
+    icon: <HiOutlineCloud size={36} />,
     title: 'Cloud Solutions',
     desc: 'Scalable and secure cloud infrastructure, DevOps, and deployment services.'
   },
   {
-    icon: '🧪',
+    icon: <RiTestTubeLine size={36} />,
     title: 'QA & Testing',
     desc: 'Comprehensive quality assurance and testing to ensure reliability and performance.'
   },
   {
-    icon: '💡',
+    icon: <FaRegLightbulb size={36} />,
     title: 'IT Consulting',
     desc: 'Expert advice to help you choose the right technology and strategy for your goals.'
   },
   {
-    icon: '🔄',
+    icon: <BiSupport size={36} />,
     title: 'Ongoing Support',
     desc: 'Reliable maintenance and support to keep your software running smoothly.'
   },

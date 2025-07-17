@@ -20,7 +20,7 @@ const Footer = () => {
                 alt="Devlayers Logo"
                 className="hidden dark:block h-12 w-auto mx-auto md:mx-0"
               />
-              <h1 classname ></h1>
+              {/* <h1 classname ></h1> */}
             </a>
             <p className="mb-4 text-base font-medium text-gray-600 dark:text-gray-300">
               Building robust web, mobile, and cloud solutions for businesses worldwide. Your trusted software development partner.

@@ -1,61 +1,78 @@
 import React from 'react';
-import { FaFacebookF, FaLinkedinIn,FaEnvelope, FaPhone, FaInstagram } from 'react-icons/fa';
+import { FaFacebookF, FaLinkedinIn, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import logo from '../assets/Group 15 (2).png';
 
 const Footer = () => {
   return (
-    <footer data-aos="fade-up" className="relative z-10 pt-14 pb-6 bg-gradient-to-br from-blue-100 via-indigo-100 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row flex-wrap justify-between items-center gap-10 md:gap-8">
-          {/* Logo and Description */}
-          <div className="flex flex-col items-center md:items-start max-w-xs text-center md:text-left w-full md:w-auto">
-            <a href="/" className="inline-block mb-4">
-              <img
-                src={logo}
-                alt="Devlayers Logo"
-                className="block dark:hidden h-12 w-auto mx-auto md:mx-0"
-              />
-              <img
-                src={logo}
-                alt="Devlayers Logo"
-                className="hidden dark:block h-12 w-auto mx-auto md:mx-0"
-              />
-              {/* <h1 classname ></h1> */}
+    <footer className="text-white py-16 px-6 bg-gradient-to-br from-black via-black to-[#0B4EA1] font-family-itc-md">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 border-b border-white/20 pb-12">
+        
+        {/* Logo and Tagline */}
+        <div className="space-y-4">
+          <img src={logo} alt="DevLayers Logo" className="h-12 w-auto" />
+          <p className="text-sm text-white/80 leading-relaxed">
+            Building robust web, mobile, and cloud solutions. Your trusted software development partner.
+          </p>
+          <div className="flex gap-3 mt-4">
+            <a href="https://www.facebook.com/people/Dev-Layers/61577244716890/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-white/20 hover:bg-blue-600 transition">
+              <FaFacebookF size={16} />
             </a>
-            <p className="mb-4 text-base font-medium text-gray-600 dark:text-gray-300">
-              Building robust web, mobile, and cloud solutions for businesses worldwide. Your trusted software development partner.
-            </p> hello my name is faizan akram and am software engineer and i do study and also i do different jobs and 
-            <div className="flex space-x-3 mt-2 justify-center md:justify-start">
-              <a href="https://www.facebook.com/people/Dev-Layers/61577244716890/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-9 h-9 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-white hover:bg-blue-600 hover:text-white transition">
-                <FaFacebookF size={16} />
-              </a>
-              <a href="https://www.linkedin.com/company/dev-layers/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-9 h-9 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-white hover:bg-blue-700 hover:text-white transition">
-                <FaLinkedinIn size={16} />
-              </a>
-              <a href="https://www.instagram.com/dev_layers?igsh=aWJieGNvZ2lueDdx" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-9 h-9 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-white hover:bg-pink-500 hover:text-white transition">
-                <FaInstagram size={16} />
-              </a>
-            </div>
+            <a href="https://www.linkedin.com/company/dev-layers/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-white/20 hover:bg-blue-700 transition">
+              <FaLinkedinIn size={16} />
+            </a>
+            <a href="https://www.instagram.com/dev_layers?igsh=aWJieGNvZ2lueDdx" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-white/20 hover:bg-pink-500 transition">
+              <FaInstagram size={16} />
+            </a>
           </div>
+        </div>
 
-          {/* Contact Info */}
-          <div className="flex flex-col gap-3 text-base text-gray-700 dark:text-gray-200 items-center md:items-end w-full md:w-auto">
-            <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Contact Us</h4>
-            <div className="flex items-center gap-2">
-              <span className="flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-br from-blue-500 to-indigo-400 text-white">
-                <FaEnvelope size={16} />
-              </span>
-              <a href="mailto:devlayers.official@gmail.com" className="hover:text-blue-600 transition">info@devlayers.org</a>
-            </div>
-            <div className="flex items-center gap-2">
-              <FaPhone className="text-blue-600 dark:text-blue-400" />
-              <a href="tel:+92 304 6193793" className="hover:text-blue-600 transition">+92 304 6193793</a>
-            </div>
+        {/* Quick Navigation */}
+        <div className="space-y-4">
+          <h3 className="text-xl font-semibold">Quick Links</h3>
+          <ul className="text-white/80 space-y-2 text-sm">
+            <li><a href="#hero" className="hover:text-white transition">Home</a></li>
+            <li><a href="#features" className="hover:text-white transition">About Us</a></li>
+            <li><a href="#platform" className="hover:text-white transition">Services</a></li>
+            <li><a href="#contact" className="hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+
+        {/* Services Section */}
+        <div className="space-y-4">
+          <h3 className="text-xl font-semibold">Services</h3>
+          <ul className="text-white/80 space-y-2 text-sm">
+            <li>Software Development</li>
+            <li>Digital Marketing</li>
+            <li>Graphic Designing</li>
+            <li>UX/UI Designing</li>
+            <li>App Development</li>
+            <li>Website Development</li>
+          </ul>
+        </div>
+
+        {/* Contact Info */}
+        <div className="space-y-4">
+          <h3 className="text-xl font-semibold">Contact</h3>
+          <div className="flex items-center gap-3">
+            <FaEnvelope className="text-white" />
+            <a href="mailto:info@devlayers.org" className="text-sm text-white/80 hover:text-white transition">info@devlayers.org</a>
+          </div>
+          <div className="flex items-center gap-3">
+            <FaPhone className="text-white" />
+            <a href="tel:+923046193793" className="text-sm text-white/80 hover:text-white transition">+92 304 6193793</a>
+          </div>
+          <div className="flex items-center gap-3">
+            <FaMapMarkerAlt className="text-white" />
+            <span className="text-sm text-white/80">
+              Canal Avenue, Abbasia Town, near Cafe Asia, Rahim Yar Khan
+            </span>
           </div>
         </div>
-        <div className="mt-10 border-t border-gray-200 dark:border-gray-700 pt-4 text-center text-sm text-gray-500 dark:text-gray-400">
-          © {new Date().getFullYear()} Devlayers. All rights reserved.
-        </div>
+      </div>
+
+      {/* Bottom */}
+      <div className="mt-10 text-center text-white/70 text-xs tracking-wide">
+        © {new Date().getFullYear()} Devlayers. All rights reserved.
       </div>
     </footer>
   );

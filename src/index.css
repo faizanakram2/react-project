@@ -1,3 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.font-family-itc-md {
+    font-family: 'ITC Avant Garde Gothic', sans-serif; /* or your actual font name */
+  }

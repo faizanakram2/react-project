@@ -16,7 +16,7 @@ import ScrollToTopButton from './components/ScrollToTopButton';
 function App() {
   return (
     <div>
-      <BackgroundWaves />
+      {/* <BackgroundWaves /> */}
       <Navbar />
       <Herosection />
       <Techscroll />

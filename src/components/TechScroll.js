@@ -1,6 +1,6 @@
 import React from 'react';
 
-const items = ['Outsourcing', 'Technology', 'Consulting'];
+const items = ['Strategy', 'Execution', 'Acceleration'];
 
 const TechScroll = () => {
   return (

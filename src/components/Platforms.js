@@ -1,6 +1,5 @@
 import React from 'react';
 import Particles from 'react-tsparticles';
-// import { Engine } from 'tsparticles-engine';
 import { loadSlim } from 'tsparticles-slim';
 
 const techStack = [
@@ -18,16 +17,16 @@ const techStack = [
 
 const Platforms = () => {
   const particlesInit = async (engine) => {
-    await loadSlim(engine); // loads basic version of tsparticles
+    await loadSlim(engine);
   };
 
   return (
-    <section className="relative py-24 bg-white font-[Montserrat] overflow-hidden">
+    <section className="relative py-20 sm:py-24 bg-white font-[Montserrat] overflow-hidden">
       {/* Particles Background */}
       <Particles
         id="tsparticles"
         init={particlesInit}
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 pointer-events-none select-none"
         options={{
           fullScreen: { enable: false },
           background: { color: { value: "#ffffff" } },
@@ -48,15 +47,15 @@ const Platforms = () => {
       />
 
       {/* Tech Stack Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
           Our Technology Stack
         </h2>
-        <p className="text-gray-600 text-lg mb-12 max-w-3xl mx-auto">
+        <p className="text-gray-600 text-base sm:text-lg mb-10 sm:mb-12 max-w-3xl mx-auto">
           Tools that empower us to build secure, scalable, and modern solutions — tailored for startups, enterprises, and everything in between.
         </p>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 sm:gap-6 md:gap-8">
           {techStack.map((tech) => (
             <div
               key={tech.name}

@@ -15,7 +15,9 @@ const ScrollToTopButton = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+        ? 'auto'
+        : 'smooth',
     });
   };
 
@@ -23,7 +25,7 @@ const ScrollToTopButton = () => {
     isVisible && (
       <button
         onClick={scrollToTop}
-        className="fixed bottom-10 right-6 z-50 p-3 rounded-full bg-white text-[#0B4EA1] shadow-md hover:bg-[#0B4EA1] hover:text-white transition-all"
+        className="fixed bottom-6 sm:bottom-10 right-4 sm:right-6 z-50 p-3 rounded-full bg-white text-[#0B4EA1] shadow-md hover:bg-[#0B4EA1] hover:text-white transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0B4EA1]"
         aria-label="Scroll to top"
       >
         <SlArrowUp size={20} />

@@ -23,13 +23,13 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black bg-opacity-50 z-0" />
 
       {/* Hero Content */}
-      <div className="relative z-10 max-w-3xl px-4">
-        <h1 className="text-4xl md:text-6xl leading-tight mb-6 font-semibold">
+      <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-4xl">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl leading-snug md:leading-tight mb-6 font-semibold">
           Empowering Your Business with{' '}
           <span className="text-[#0B4EA1]">Custom Software</span> Solutions
         </h1>
 
-        <p className="text-lg md:text-xl text-white/90 font-light mb-8">
+        <p className="text-base sm:text-lg md:text-xl text-white/90 font-light mb-8">
           We build modern web, mobile, and cloud apps that scale with your vision.
         </p>
       </div>

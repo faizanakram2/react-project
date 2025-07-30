@@ -48,11 +48,13 @@ const Card = ({ title, desc, icon, side }) => {
       ([entry]) => {
         const el = entry.target;
         if (entry.isIntersecting) {
-          el.classList.add("opacity-100", "translate-x-0");
-          el.classList.remove(
-            "opacity-0",
-            side === "left" ? "-translate-x-24" : "translate-x-24"
-          );
+          el.classList.add('opacity-100', 'translate-x-0');
+
+          const classesToRemove = ['opacity-0'];
+          if (side === 'left') classesToRemove.push('-translate-x-24');
+          else if (side === 'right') classesToRemove.push('translate-x-24');
+
+          el.classList.remove(...classesToRemove);
           observer.unobserve(el);
         }
       },
@@ -62,13 +64,17 @@ const Card = ({ title, desc, icon, side }) => {
     if (ref.current) {
       observer.observe(ref.current);
     }
+
+    return () => {
+      if (ref.current) observer.unobserve(ref.current);
+    };
   }, [side]);
 
   return (
     <div
       ref={ref}
       className={`
-        w-full sm:w-[46%] lg:w-[30%] p-6 rounded-3xl shadow-xl border border-white/10 backdrop-blur-sm transition-all duration-700 ease-in-out
+        w-full sm:w-[48%] lg:w-[30%] p-6 rounded-3xl shadow-xl border border-white/10 backdrop-blur-sm transition-all duration-700 ease-in-out
         bg-white/5 hover:bg-white/10
         opacity-0 text-left
         ${side === 'left' ? '-translate-x-24' : side === 'right' ? 'translate-x-24' : ''}
@@ -77,7 +83,7 @@ const Card = ({ title, desc, icon, side }) => {
       <div className="text-[#0B4EA1] bg-white/10 rounded-full w-14 h-14 flex items-center justify-center mb-5 shadow-md">
         {icon}
       </div>
-      <h3 className="text-xl font-semibold text-white mb-2 font-montserrat">{title}</h3>
+      <h3 className="text-lg font-semibold text-white mb-2 font-montserrat">{title}</h3>
       <p className="text-gray-300 text-sm leading-relaxed">{desc}</p>
     </div>
   );
@@ -85,15 +91,18 @@ const Card = ({ title, desc, icon, side }) => {
 
 const TokenSales = () => {
   return (
-    <section id="process" className="py-24 px-6 bg-gradient-to-br from-black via-black to-[#0B4EA1]">
+    <section
+      id="process"
+      className="py-20 sm:py-24 px-4 sm:px-6 bg-gradient-to-br from-black via-black to-[#0B4EA1]"
+    >
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-4xl font-bold text-white mb-5 font-montserrat">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-5 font-montserrat">
           How We Work
         </h2>
-        <p className="text-gray-300 max-w-2xl mx-auto mb-14 text-base font-light">
+        <p className="text-gray-300 max-w-2xl mx-auto mb-12 text-sm sm:text-base font-light">
           We follow a structured and collaborative approach to turn your ideas into powerful digital products.
         </p>
-        <div className="flex flex-wrap gap-8 justify-center items-stretch">
+        <div className="flex flex-wrap gap-6 sm:gap-8 justify-center items-stretch">
           {steps.map((step, index) => (
             <Card key={index} {...step} />
           ))}

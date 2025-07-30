@@ -44,19 +44,20 @@ const Features = () => {
   return (
     <section
       id="features"
-      className="py-24 bg-white text-center"
-      style={{ fontFamily: 'Montserrat, sans-serif' }}
+      className="py-20 sm:py-24 bg-white text-center font-[Montserrat]"
     >
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-[#0B4EA1] font-semibold uppercase tracking-wider text-sm mb-2">
           Our Services
         </p>
-        <h2 className="text-4xl font-bold text-gray-900 mb-6">What We Offer</h2>
-        <p className="text-gray-600 text-lg max-w-2xl mx-auto mb-14">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          What We Offer
+        </h2>
+        <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto mb-12">
           We empower your business with complete end-to-end digital services, from design to deployment and beyond.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
           {features.map((feature, idx) => (
             <div
               key={idx}
